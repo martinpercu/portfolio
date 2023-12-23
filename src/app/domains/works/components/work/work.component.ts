@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Work } from '@models/work.model'
 
 @Component({
   selector: 'app-work',
@@ -8,5 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './work.component.css'
 })
 export class WorkComponent {
+  @Input({required: true}) work!: Work;
+
 
 }

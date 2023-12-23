@@ -1,1 +1,7 @@
 <p>work-container works!</p>
+
+<div class="grid grid-cols-4 gap-6 mt-5">
+  @for (work of works(); track $index) {
+  <app-work [work]="work"  />
+  }
+</div>

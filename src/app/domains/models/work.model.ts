@@ -1,7 +1,10 @@
-export interface Product {
+export interface Work {
   title: string;
   description: string;
-  images: string;
+  image: string;
   year: number;
-  creationAt?: string;
+  tech: string[];
+  frontend: boolean;
+  backend: boolean;
+  githubUrl?: string;
 }
