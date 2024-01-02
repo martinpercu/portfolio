@@ -3,8 +3,9 @@ export interface Work {
   description: string;
   image: string;
   year: number;
-  tech: string[];
+  techs: string[];
   frontend: boolean;
   backend: boolean;
   githubUrl?: string;
+  size: number;
 }
