@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-btn',
+  selector: 'app-techs',
   standalone: true,
   imports: [],
-  templateUrl: './btn.component.html'
+  templateUrl: './techs.component.html'
 })
-export class BtnComponent {
+export class TechsComponent {
 
 }

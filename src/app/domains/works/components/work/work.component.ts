@@ -6,8 +6,7 @@ import { Work } from '@models/work.model'
   selector: 'app-work',
   standalone: true,
   imports: [],
-  templateUrl: './work.component.html',
-  styleUrl: './work.component.css'
+  templateUrl: './work.component.html'
 })
 export class WorkComponent {
   @Input({required: true}) work!: Work;

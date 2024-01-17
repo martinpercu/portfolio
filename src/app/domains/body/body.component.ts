@@ -1,0 +1,41 @@
+import { Component, HostBinding, signal, effect, OnChanges } from '@angular/core';
+
+import { WorkContainerComponent } from '@works/pages/work-container/work-container.component';
+
+import { HeaderComponent } from '@header/header.component';
+import { TechsComponent } from '@techs/techs.component';
+import { ProjectsComponent } from '@projects/pages/projects/projects.component';
+import { MyselfComponent } from '@myself/pages/myself/myself.component';
+
+
+@Component({
+  selector: 'app-body',
+  standalone: true,
+  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent],
+  templateUrl: './body.component.html'
+})
+export class BodyComponent {
+
+  darkMode = signal<boolean>(
+    JSON.parse(window.localStorage.getItem('darkMode') ?? 'false')
+  );
+
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode();
+  }
+
+  constructor() {
+    effect(() => {
+      window.localStorage.setItem('darkMode', JSON.stringify(this.darkMode()));
+    });
+  }
+
+  // ngOnChanges() {
+  //   window.localStorage.setItem('darkMode', JSON.stringify(this.darkMode()));
+  // }
+
+
+
+
+}

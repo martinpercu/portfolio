@@ -1,34 +1,31 @@
-<!-- <p>work works!</p> -->
-
-<!-- <div class="group rounded-3xl border max-w-2xl">
-  <div href="#" class="overflow-hidden rounded-t-lg">
-      <img [src]="work.image" [alt]="work.title" class="object-cover object-center group-hover:opacity-60">
+<div class="flex flex-row md:flex-col bg-white border border-gray-200 rounded-2xl shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <div class="w-1/3 md:w-full">
+    <img class="rounded-l-2xl md:rounded-t-2xl md:rounded-b-none object-cover w-full h-full md:h-72" [src]="work.image" [alt]="work.title" alt="" />
   </div>
-  <div class="flex flex-col file: space-y-2 p-4 text-lg text-gray-700">
-    <div>
-      {{ work.title }}
-    </div>
-    <div class="text-end font-medium">
-     {{ work.year }}
-    </div>
-    <p class="text-xs font-medium text-gray-500">Added {{ work.year }}</p>
-    <button class="text-black bg-gray-100 shadow-md font-medium rounded-md text-sm px-5 py-2.5 w-full"
-    >This is a button
-    </button>
-  </div>
-</div> -->
-
-
-<div class="flex bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <img [src]="work.image" [alt]="work.title"  class="object-cover p-2 w-48">
-  <div class="flex flex-col justify-between p-4 leading-normal">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ work.title }}  -  {{ work.year }} - {{ work.size }} </h5>
+  <div class="w-2/3 md:w-full">
+    <div class="p-5">
+      <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ work.title }} - {{ work.year
+          }} - {{ work.size }} </h5>
+      </a>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ work.description }}</p>
-      <div class="flex flex-row gap-2">
-        @for (tech of work.techs; track $index) {
-          <div>{{ tech }}</div>
-        }
-      </div>
-  </div>
-</div>
+      @for (tech of work.techs; track $index) {
+      <button
+        class="items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        {{ tech }}
+      </button>
+      }
+      <button href="#"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Read more
+        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9" />
+        </svg>
+      </button>
+    </div>
 
+  </div>
+
+</div>

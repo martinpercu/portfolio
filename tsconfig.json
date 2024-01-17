@@ -28,6 +28,9 @@
       "@models/*": ["./src/app/domains/models/*"],
       "@shared/*": ["./src/app/domains/shared/*"],
       "@works/*": ["./src/app/domains/works/*"],
+      "@myself/*": ["./src/app/domains/myself/*"],
+      "@techs/*": ["./src/app/domains/techs/*"],
+      "@projects/*": ["./src/app/domains/projects/*"],
     }
   },
   "angularCompilerOptions": {
