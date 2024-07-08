@@ -7,11 +7,13 @@ import { TechsComponent } from '@techs/techs.component';
 import { ProjectsComponent } from '@projects/pages/projects/projects.component';
 import { MyselfComponent } from '@myself/pages/myself/myself.component';
 
+import { IconsModule } from './../../../icon.module';
+
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent],
+  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule],
   templateUrl: './body.component.html'
 })
 export class BodyComponent {

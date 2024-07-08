@@ -5,8 +5,8 @@ import { Project } from '@models/project.model';
 import { images } from "@works/images/images";
 import { projectslist } from "@projects/projectslist";
 
-
 import { ProjectComponent } from '@projects/component/project/project.component'
+
 
 @Component({
   selector: 'app-projects',
@@ -22,13 +22,14 @@ export class ProjectsComponent {
 
   projects = signal<Project[]>([]);
 
-  initialWorks: Project[] = projectslist;
+  initialProjects: Project[] = projectslist;
 
   constructor() {
+    this.projects.set(this.initialProjects);
   }
 
   ngOnInit() {
-    this.projects.set(this.initialWorks);
+    // this.projects.set(this.initialProjects);
   }
 
 
@@ -41,8 +42,13 @@ export class ProjectsComponent {
     this.projects.update((projects) => projects.filter(project => project.backend));
   }
 
+  stepByStep() {
+    this.resetAll();
+    this.projects.update((projects) => projects.filter(project => project.githubOk));
+  }
+
   resetAll() {
-    this.projects.set(this.initialWorks)
+    this.projects.set(this.initialProjects)
   }
 
   time() {
@@ -52,20 +58,10 @@ export class ProjectsComponent {
     console.log(this.projects());
   }
 
-  size() {
-    this.projects.set(this.projects().sort((w2, w1) => {
-      return w1.size - w2.size;
-    }));
-    console.log(this.projects());
-  }
 
   test() {
     console.log(this.projects());
   }
 
-  python() {
-    this.resetAll();
-    this.projects.update((projects) => projects.filter(project => project.techs.includes('python')));
-  }
 
 }

@@ -36,40 +36,4 @@ export class WorkContainerComponent {
   }
 
 
-  frontEnd() {
-    this.resetAll();
-    this.works.update((works) => works.filter(work => work.frontend));
-  }
-  backEnd() {
-    this.resetAll();
-    this.works.update((works) => works.filter(work => work.backend));
-  }
-
-  resetAll() {
-    this.works.set(this.initialWorks)
-  }
-
-  time() {
-    this.works.set(this.works().sort((w2, w1) => {
-      return w1.year - w2.year;
-    }));
-    console.log(this.works());
-  }
-
-  size() {
-    this.works.set(this.works().sort((w2, w1) => {
-      return w1.size - w2.size;
-    }));
-    console.log(this.works());
-  }
-
-  test() {
-    console.log(this.works());
-  }
-
-  python() {
-    this.resetAll();
-    this.works.update((works) => works.filter(work => work.techs.includes('python')));
-  }
-
 }

@@ -1,11 +1,16 @@
+// import { Tech } from './tech.model';
+
 export interface Project {
   title: string;
   description: string;
   image: string;
   year: number;
-  techs: string[];
-  frontend: boolean;
-  backend: boolean;
+  // techs: Tech[];
+  techs?: string[];
+  frontend?: boolean;
+  backend?: boolean;
+  githubOk: boolean;
   githubUrl?: string;
-  size: number;
+  webOk: boolean;
+  webUrl?: string;
 }
