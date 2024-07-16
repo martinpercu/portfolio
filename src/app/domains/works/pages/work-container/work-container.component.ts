@@ -1,10 +1,13 @@
-import { Component, signal, Input, WritableSignal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { Work } from '@models/work.model';
 import { WorkComponent } from "@works/components/work/work.component";
 
 import { images } from "@works/images/images";
-import { workslist } from "@works/workslist";
+// import { workslist } from "@works/workslist";
+
+import { WorksService } from '@services/works.service';
+
 
 
 
@@ -24,16 +27,26 @@ export class WorkContainerComponent {
 
   // initialWorks = signal<Work[]>([]);
 
-  works = signal<Work[]>([]);
+  // works = signal<Work[]>([]);
 
-  initialWorks: Work[] = workslist;
+  works: Work[] = [];
+
+
+  // initialWorks: Work[] = workslist;
+
+
+
+  private worksService = inject(WorksService);
 
   constructor() {
+    this.works = this.worksService.returnWorks();
+    console.log(this.works);
   }
 
-  ngOnInit() {
-    this.works.set(this.initialWorks);
-  }
+  // ngOnInit() {
+  //   // this.works.set(this.initialWorks);
+  //   this.works = this.initialWorks
+  // }
 
 
 }

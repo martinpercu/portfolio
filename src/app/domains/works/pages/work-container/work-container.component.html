@@ -1,12 +1,12 @@
 <div class="mx-4">
 
 
-        <div class="text-center text-lg md:text-2xl font-semibold dark:text-white">Last Works</div>
+  <div class="text-center text-lg md:text-2xl font-semibold dark:text-white">Latest Works</div>
 
 
 
   <div class="m-auto grid grid-cols-1 md:grid-cols-1 gap-5 mt-3 max-w-4xl">
-    @for (work of works(); track $index) {
+    @for (work of works; track $index) {
     <app-work [work]="work" />
     }
   </div>

@@ -1,12 +1,12 @@
-// import { Tech } from './tech.model';
+import { Tech } from './tech.model';
 
 export interface Project {
   title: string;
   description: string;
   image: string;
   year: number;
-  // techs: Tech[];
-  techs?: string[];
+  techs: Tech[];
+  techs2nd?: Tech[];
   frontend?: boolean;
   backend?: boolean;
   githubOk: boolean;

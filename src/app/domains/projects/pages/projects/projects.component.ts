@@ -1,11 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 
 import { Project } from '@models/project.model';
 
 import { images } from "@works/images/images";
 import { projectslist } from "@projects/projectslist";
 
-import { ProjectComponent } from '@projects/component/project/project.component'
+import { ProjectComponent } from '@projects/component/project/project.component';
+
+import { ProjectsService } from '@services/projects.service'
 
 
 @Component({
@@ -16,52 +18,39 @@ import { ProjectComponent } from '@projects/component/project/project.component'
 })
 export class ProjectsComponent {
 
+
+  private projectsService = inject(ProjectsService);
+
   imageUrl = images.IMAGE_URL;
 
   initlist = images;
 
-  projects = signal<Project[]>([]);
+  projects : Project[] = [];
 
-  initialProjects: Project[] = projectslist;
 
   constructor() {
-    this.projects.set(this.initialProjects);
-  }
+    this.projects = this.projectsService.returnProjects();
+    console.log(this.projects);
 
-  ngOnInit() {
-    // this.projects.set(this.initialProjects);
-  }
+  };
 
-
-  frontEnd() {
-    this.resetAll();
-    this.projects.update((projects) => projects.filter(project => project.frontend));
-  }
-  backEnd() {
-    this.resetAll();
-    this.projects.update((projects) => projects.filter(project => project.backend));
-  }
-
-  stepByStep() {
-    this.resetAll();
-    this.projects.update((projects) => projects.filter(project => project.githubOk));
-  }
 
   resetAll() {
-    this.projects.set(this.initialProjects)
-  }
+    this.projects = this.projectsService.returnProjects();
+  };
 
-  time() {
-    this.projects.set(this.projects().sort((w2, w1) => {
-      return w1.year - w2.year;
-    }));
-    console.log(this.projects());
-  }
+  backEndOnly() {
+    this.projects = this.projectsService.returnProjects();
+    this.projects = this.projects.filter(i => (i.backend))
+  };
 
 
-  test() {
-    console.log(this.projects());
+  frontEndOnly() {
+    this.projects = this.projectsService.returnProjects();
+    this.projects = this.projects.filter(i => (i.frontend))
   }
+
+
 
 
 }

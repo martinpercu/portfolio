@@ -31,6 +31,7 @@
       "@myself/*": ["./src/app/domains/myself/*"],
       "@techs/*": ["./src/app/domains/techs/*"],
       "@projects/*": ["./src/app/domains/projects/*"],
+      "@services/*": ["./src/app/domains/services/*"],
     }
   },
   "angularCompilerOptions": {
