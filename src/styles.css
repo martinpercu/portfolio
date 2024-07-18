@@ -20,3 +20,7 @@
   color: rgb(88, 209, 60);
 }
 
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,64 +1,72 @@
 <div class="bg-white dark:bg-stone-950 min-h-lvh">
 
-  <nav class="bg-gray-50 border-gray-200 dark:bg-gray-900">
-    <div class="flex mx-auto max-w-5xl flex-wrap items-center justify-between px-4 lg:px-0 py-4 ">
+  <div class="w-full fixed h-16">
 
-      <div class="flex items-center space-x-3">
+    <nav class="bg-transparent">
+      <div class="flex mx-auto max-w-5xl flex-wrap items-center justify-between">
 
-        <img class="w-10 h-10 rounded-full" src="./../../../../../assets/img/avatar-01.jpg" alt="Neil image">
 
-        <div class="text-xl text-gray-900 truncate dark:text-white">
-          Hey, I'm Martin
+        <div class="bg-violet-700 bg-opacity-65 mt-1 px-6 flex items-center m-auto gap-4 dark:text-green-500">
+
+          <a href="#myself">yo</a>
+          <a href="#works">works</a>
+          <a href="#proyects">proyects</a>
+
+
+          <div (click)="darkMode.set(!darkMode())" class="flex flex-row cursor-pointer">
+            @if (!darkMode()) {
+              <div class="pr-1">dark</div>
+            <i-tabler class="iconLightMode m-auto" name="moon"></i-tabler>
+            }
+            @else {
+              <div class="pr-1">light</div>
+            <i-tabler class="iconDarktMode m-auto" name="sun"></i-tabler>
+            }
+          </div>
+
+          <!-- <div (click)="darkMode.set(!darkMode())">
+            @if (!darkMode()) {
+            <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z" />
+            </svg>
+            }
+            @else {
+            <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+              <path
+                d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z" />
+            </svg>
+            }
+          </div> -->
+
+
         </div>
-        <!-- <div>
-          <i-tabler name="sun"></i-tabler>
-
-        </div> -->
-      </div>
-      <div class="flex items-center">
-
-        <div (click)="darkMode.set(!darkMode())" class="items-center">
-          @if (!darkMode()) {
-          <i-tabler class="iconLightMode m-auto" name="sun"></i-tabler>
-
-          }
-          @else {
-          <i-tabler class="iconDarktMode m-auto" name="moon"></i-tabler>
-          }
-        </div>
-
-        <!-- <div (click)="darkMode.set(!darkMode())">
-          @if (!darkMode()) {
-          <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z" />
-          </svg>
-          }
-          @else {
-          <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-            <path
-              d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z" />
-          </svg>
-          }
-        </div> -->
-
 
       </div>
-
-    </div>
-  </nav>
+    </nav>
+  </div>
 
 
 
 
   <!-- <app-header></app-header> -->
-  <app-myself />
+   <!-- <div class="h-24">
+    NADA IMPORTANTE
+   </div> -->
+   <div id="myself" class="pt-16">
+    <app-myself></app-myself>
+   </div>
 
-  <app-work-container />
+   <div id="works" class="pt-16">
+    <app-work-container></app-work-container>
+   </div>
 
-  <app-projects />
+   <div id="proyects" class="pt-16">
+    <app-projects></app-projects>
+   </div>
+
 
   <!-- <app-techs /> -->
 
