@@ -1,28 +1,37 @@
-<div class="bg-white dark:bg-stone-950 min-h-lvh">
+<div class="bg-white dark:bg-gray-900 min-h-lvh
+w-full
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(208,215,209,0.5),rgba(255,255,255,0.9))]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(156,163,175,0.3),rgba(255,255,255,0))]
+">
 
-  <div class="w-full fixed h-16">
+  <div class="w-full fixed z-50">
 
-    <nav class="bg-transparent">
-      <div class="flex mx-auto max-w-5xl flex-wrap items-center justify-between">
-
-
-        <div class="bg-violet-700 bg-opacity-65 mt-1 px-6 flex items-center m-auto gap-4 dark:text-green-500">
-
-          <a href="#myself">yo</a>
-          <a href="#works">works</a>
-          <a href="#proyects">proyects</a>
+    <nav class="bg-transparent text-base">
+      <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
 
 
-          <div (click)="darkMode.set(!darkMode())" class="flex flex-row cursor-pointer">
-            @if (!darkMode()) {
-              <div class="pr-1">dark</div>
-            <i-tabler class="iconLightMode m-auto" name="moon"></i-tabler>
-            }
-            @else {
-              <div class="pr-1">light</div>
-            <i-tabler class="iconDarktMode m-auto" name="sun"></i-tabler>
-            }
+        <div
+          class="bg-gray-100 bg-opacity-40 dark:bg-gray-900 dark:bg-opacity-50 tracking-widest mt-2 m-auto h-8 gap-8 sm:gap-12 px-4 sm:px-8  rounded-full  backdrop-blur-sm flex items-center dark:text-green-200">
+
+          <a href="#myself" class="hover:underline hover:transition hover:scale-105">Yo</a>
+          <a href="#works" class="hover:underline hover:transition hover:scale-105">Works</a>
+          <a href="#proyects" class="hover:underline hover:transition hover:scale-105">Proyects</a>
+
+          <div class="hover:underline cursor-pointer hover:transition hover:scale-105">
+            <div (click)="darkMode.set(!darkMode())" class="flex flex-row ">
+              @if (!darkMode()) {
+              <i-tabler class="iconLightMode m-auto"
+                name="moon"></i-tabler>
+              <div class="pl-1 m-auto">Dark</div>
+              }
+              @else {
+              <i-tabler class="iconDarktMode m-auto"
+                name="sun"></i-tabler>
+              <div class="pl-1 m-auto">Light</div>
+              }
+            </div>
           </div>
+
 
           <!-- <div (click)="darkMode.set(!darkMode())">
             @if (!darkMode()) {
@@ -52,20 +61,20 @@
 
 
   <!-- <app-header></app-header> -->
-   <!-- <div class="h-24">
+  <!-- <div class="h-24">
     NADA IMPORTANTE
    </div> -->
-   <div id="myself" class="pt-16">
+  <div id="myself" class="pt-16 sm:pt-20 md:pt-24">
     <app-myself></app-myself>
-   </div>
+  </div>
 
-   <div id="works" class="pt-16">
+  <div id="works" class="pt-16">
     <app-work-container></app-work-container>
-   </div>
+  </div>
 
-   <div id="proyects" class="pt-16">
+  <div id="proyects" class="pt-16">
     <app-projects></app-projects>
-   </div>
+  </div>
 
 
   <!-- <app-techs /> -->
