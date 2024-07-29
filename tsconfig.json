@@ -32,6 +32,7 @@
       "@techs/*": ["./src/app/domains/techs/*"],
       "@projects/*": ["./src/app/domains/projects/*"],
       "@services/*": ["./src/app/domains/services/*"],
+      "@icons/*": ["./src/*"],
     }
   },
   "angularCompilerOptions": {

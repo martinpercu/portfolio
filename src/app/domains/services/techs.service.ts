@@ -56,7 +56,7 @@ export class TechsService {
       {
         name: 'JavaScript',
         actual: true,
-        icon: 'javaScript',
+        icon: 'javascript',
         techArea: this.techAreas[0]
       },
       {
@@ -255,6 +255,12 @@ export class TechsService {
         name: 'Stripe',
         actual: true,
         icon: 'stripe',
+        techArea: this.techAreas[2]
+      },
+      {
+        name: 'EmailJS',
+        actual: true,
+        icon: 'emailjs',
         techArea: this.techAreas[2]
       },
     ]
