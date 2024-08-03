@@ -6,8 +6,32 @@
         src="./../../../../../assets/img/projects/{{project.image}}.jpg" [alt]="project.title"
         class="object-cover p-2 w-48 h-48 rounded-2xl">
     </div>
-    <div class="flex flex-col w-2/3 justify-between p-4">
-      <div class="text-xl tracking-tight text-gray-700 dark:text-gray-200">{{ project.title }} </div>
+
+    <div class="flex flex-col w-2/3 p-4">
+      <div class="text-xl text-gray-700 dark:text-gray-200">{{ project.title }} </div>
+
+      <div class="flex flex-row gap-2 text-sm">
+
+        <div class="flex w-1/2">
+         <a href="{{ project.githubUrl }}" target="_blank"
+          class="rounded-md inline-flex items-center justify-center gap-1 px-2 sm:px-4 text-gray-800 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-green-200 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white active:bg-black">
+          <i-tabler class="m-auto scale-75 " name="brand-github"></i-tabler>
+          GitHub
+        </a>
+        </div>
+
+        <div class="flex w-1/2">
+
+        <a href="{{ project.webUrl }}" target="_blank"
+          class="rounded-md inline-flex items-center justify-center gap-1 px-2 sm:px-4 text-gray-800 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-green-200 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white active:bg-black">
+          <i-tabler class="m-auto scale-75 " name="code"></i-tabler>
+          Preview
+        </a>
+
+        </div>
+
+      </div>
+
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-200">{{ project.description }}</p>
 
 
