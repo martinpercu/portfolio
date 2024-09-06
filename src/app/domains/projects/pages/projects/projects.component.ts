@@ -7,14 +7,17 @@ import { projectslist } from "@projects/projectslist";
 
 import { ProjectComponent } from '@projects/component/project/project.component';
 
-import { ProjectsService } from '@services/projects.service'
+import { ProjectsService } from '@services/projects.service';
+
+import { IconsModule } from '@icons/icon.module';
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectComponent],
-  templateUrl: './projects.component.html'
+  imports: [ProjectComponent, IconsModule],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
 

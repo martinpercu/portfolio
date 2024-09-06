@@ -9,13 +9,13 @@ w-full
     <nav class="bg-transparent text-base">
       <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
 
-
         <div
-          class="bg-gray-100 bg-opacity-40 dark:bg-gray-900 dark:bg-opacity-50 tracking-widest mt-2 m-auto h-8 gap-8 sm:gap-12 px-4 sm:px-8  rounded-full  backdrop-blur-sm flex items-center dark:text-green-200 shadow-md shadow-gray-400 dark:shadow-green-400/30">
+          class="bg-gray-100 bg-opacity-40 dark:bg-gray-900 dark:bg-opacity-50 tracking-widest mt-2 m-auto h-8 gap-8 sm:gap-12 px-3 sm:px-8 rounded-full backdrop-blur-sm flex items-center dark:text-green-200 shadow-md shadow-gray-400 dark:shadow-green-400/30">
 
-          <a href="#myself" class="hover:underline hover:transition hover:scale-105">Myself</a>
+          <!-- <a href="#myself" class="hover:underline hover:transition hover:scale-105">Myself</a> -->
           <a href="#works" class="hover:underline hover:transition hover:scale-105">Works</a>
           <a href="#proyects" class="hover:underline hover:transition hover:scale-105">Proyects</a>
+          <a href="#about" class="hover:underline hover:transition hover:scale-105">About Me</a>
 
           <div class="hover:underline cursor-pointer hover:transition hover:scale-105">
             <div (click)="darkMode.set(!darkMode())" class="flex flex-row ">
@@ -31,25 +31,6 @@ w-full
               }
             </div>
           </div>
-
-
-          <!-- <div (click)="darkMode.set(!darkMode())">
-            @if (!darkMode()) {
-            <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z" />
-            </svg>
-            }
-            @else {
-            <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-              <path
-                d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z" />
-            </svg>
-            }
-          </div> -->
-
 
         </div>
 
@@ -74,6 +55,14 @@ w-full
 
   <div id="proyects" class="pt-16">
     <app-projects></app-projects>
+  </div>
+
+  <div id="about" class="pt-16">
+    <app-about></app-about>
+  </div>
+
+  <div id="footer" class="pt-16">
+    <app-footer></app-footer>
   </div>
 
 
