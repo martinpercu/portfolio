@@ -34,6 +34,7 @@
       "@services/*": ["./src/app/domains/services/*"],
       "@about/*": ["./src/app/domains/about/*"],
       "@footer/*": ["./src/app/domains/footer/*"],
+      "@contact/*": ["./src/app/domains/contact/*"],
       "@icons/*": ["./src/*"],
     }
   },

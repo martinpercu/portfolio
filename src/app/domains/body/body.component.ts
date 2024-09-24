@@ -8,8 +8,10 @@ import { ProjectsComponent } from '@projects/pages/projects/projects.component';
 import { MyselfComponent } from '@myself/pages/myself/myself.component';
 import { AboutComponent } from '@about/about.component';
 import { FooterComponent } from '@footer/footer.component';
+import { ContactComponent } from '@contact/contact.component';
 
 import { IconsModule } from '@icons/icon.module';
+
 
 // import { Navigation } from '@angular/router';
 
@@ -19,7 +21,7 @@ import { IconsModule } from '@icons/icon.module';
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule, AboutComponent, FooterComponent],
+  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule, AboutComponent, FooterComponent, ContactComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
@@ -29,10 +31,11 @@ export class BodyComponent {
     JSON.parse(window.localStorage.getItem('darkMode') ?? 'false')
   );
 
-
   @HostBinding('class.dark') get mode() {
     return this.darkMode();
   }
+
+  showContactForm: boolean = false;
 
   constructor() {
     effect(() => {
@@ -47,6 +50,11 @@ export class BodyComponent {
   // clickNav(param: any) {
   //   this.navigate(param);
   // }
+
+
+  updateShowStatus(data: any) {
+    this.showContactForm = data
+  }
 
 
 

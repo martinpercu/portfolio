@@ -4,7 +4,14 @@ w-full
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(156,163,175,0.3),rgba(255,255,255,0))]
 ">
 
-  <div class="w-full fixed z-50">
+  @if(showContactForm) {
+
+  <div>
+    <app-contact (contactHandler)="updateShowStatus($event)"></app-contact>
+  </div>
+  }
+
+  <div class="w-full fixed z-10">
 
     <nav class="bg-transparent text-base">
       <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
@@ -41,12 +48,13 @@ w-full
 
 
 
+
   <!-- <app-header></app-header> -->
   <!-- <div class="h-24">
     NADA IMPORTANTE
    </div> -->
   <div id="myself" class="pt-20 md:pt-24">
-    <app-myself></app-myself>
+    <app-myself (contactHandler)="updateShowStatus($event)"></app-myself>
   </div>
 
   <div id="works" class="pt-16">
