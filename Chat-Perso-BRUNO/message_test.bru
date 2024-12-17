@@ -1,0 +1,17 @@
+meta {
+  name: message_test
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/chat
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "messages": "Cual es tu nombre ? y En que fecha estamos ?"
+  }
+}
