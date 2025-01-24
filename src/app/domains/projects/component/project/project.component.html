@@ -44,21 +44,21 @@
 
   <div class="text-center m-auto sm:max-w-96 pb-2 pt-1">
     @for (tech of project.techs; track $index) {
-    <div class="inline-flex mx-1 items-center justify-center border rounded-lg">
+    <div class="bg-gray-50 dark:bg-gray-700 inline-flex mx-1 items-center justify-center border rounded-lg">
 
       <img class="ml-2 w-3 h-3" src="./../../../../../assets/icons/{{tech.icon}}.svg" alt="">
 
-      <div class="text-cyan-500 px-2 text-xs">
+      <div class="text-cyan-600 dark:text-cyan-400 px-2 text-xs">
         {{ tech.name }}
       </div>
 
     </div>
     }@for (tech of project.techs2nd; track $index) {
-      <div class="inline-flex mx-1 items-center justify-center border rounded-lg">
+      <div class="bg-gray-50 dark:bg-gray-700 inline-flex mx-1 items-center justify-center border rounded-lg">
 
         <img class="ml-2 w-3 h-3" src="./../../../../../assets/icons/{{tech.icon}}.svg" alt="">
 
-        <div class="text-cyan-500 px-2 text-xs">
+        <div class="text-cyan-600 dark:text-cyan-400 px-2 text-xs">
           {{ tech.name }}
         </div>
 

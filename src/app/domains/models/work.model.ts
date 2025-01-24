@@ -12,6 +12,7 @@ export interface Work {
   techs2nd: Tech[];
   frontend: boolean;
   backend: boolean;
+  important_text?: string;
   github?: string;
   github_text?: string;
   github2nd?: string;
@@ -26,4 +27,6 @@ export interface Work {
   youtube2nd_text?: string;
   extra_link?: string;
   extra_link_text?: string;
+  extra_link2?: string;
+  extra_link2_text?: string;
 }
