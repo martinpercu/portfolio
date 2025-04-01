@@ -1,0 +1,17 @@
+meta {
+  name: test_assistant
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/chat_a
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hola que tal ??"
+  }
+}

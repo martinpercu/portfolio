@@ -1,0 +1,43 @@
+<p>chat3 works!</p>
+
+
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>Chat</h2>
+  </div>
+  <div class="chat-messages">
+    <div *ngFor="let message of chatMessages" [ngClass]="{ 'user-message': message.role === 'user', 'assistant-message': message.role === 'assistant' }">
+      <p>{{ message.message }}</p>
+      <p *ngIf="message.content">{{ message.content }}</p>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="userMessage" placeholder="Type a message...">
+    <button (click)="sendMessage()">Send</button>
+  </div>
+  <div class="loading-response" *ngIf="loadingResponse">
+    <p>Loading response...</p>
+  </div>
+</div>
+
+
+<!-- <div class="chat-container">
+  <h1>Chat with the bot</h1>
+  <div class="chat-box">
+    <div class="user-message">
+      <label for="userMessage">Your Message:</label>
+      <textarea id="userMessage" [(ngModel)]="userMessage" rows="4" placeholder="Type your message..."></textarea>
+    </div>
+    <button (click)="sendMessage()" [disabled]="isLoading">Send</button>
+    <div *ngIf="isLoading" class="loading">Loading...</div>
+  </div>
+  <div>
+    {{ chatMessages }}
+  </div>
+
+  <div class="bot-response">
+    <h2>Bot Response:</h2>
+    <pre>{{ botResponse }}</pre>
+
+  </div>
+</div> -->
