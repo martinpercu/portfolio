@@ -8,9 +8,14 @@ import { ChatComponent } from '@chat/chat.component';
 import { Chat2Component } from '@chat2/chat2.component';
 import { Chat3Component } from '@chat3/chat3.component';
 import { ResumePdfComponent } from './domains/resume-pdf/resume-pdf.component';
+import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.component';
 
 
 export const routes: Routes = [
+  {
+    path: 'ia',
+    component: ProjectsIaComponent
+  },
   {
     path: 'works',
     component: WorkContainerComponent

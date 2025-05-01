@@ -287,6 +287,24 @@ export class TechsService {
         icon: 'react',
         techArea: this.techAreas[2]
       },
+      {
+        name: 'Python',
+        actual: true,
+        icon: 'python',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Langchain',
+        actual: true,
+        icon: 'langchain',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Pinecone',
+        actual: true,
+        icon: 'pinecone',
+        techArea: this.techAreas[1]
+      },
     ]
 
    }

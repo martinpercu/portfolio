@@ -31,6 +31,7 @@
       "@myself/*": ["./src/app/domains/myself/*"],
       "@techs/*": ["./src/app/domains/techs/*"],
       "@projects/*": ["./src/app/domains/projects/*"],
+      "@projects-ia/*": ["./src/app/domains/projects-ia/*"],
       "@services/*": ["./src/app/domains/services/*"],
       "@about/*": ["./src/app/domains/about/*"],
       "@footer/*": ["./src/app/domains/footer/*"],
