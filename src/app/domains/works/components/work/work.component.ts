@@ -5,7 +5,6 @@ import { Work } from '@models/work.model';
 import { IconsModule } from '@icons/icon.module';
 
 
-
 @Component({
   selector: 'app-work',
   standalone: true,

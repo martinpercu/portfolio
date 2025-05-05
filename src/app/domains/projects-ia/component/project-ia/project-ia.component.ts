@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 import { Project_IA } from '@models/project_ia.model';
 
-
 import { IconsModule } from '@icons/icon.module';
+
 
 @Component({
   selector: 'app-project-ia',
@@ -14,8 +14,6 @@ import { IconsModule } from '@icons/icon.module';
 })
 export class ProjectIaComponent {
   @Input({required: true}) project_ia!: Project_IA;
-
-
 
 
   choiceNav: string = 'description';

@@ -150,7 +150,7 @@ export class TechsService {
         techArea: this.techAreas[2]
       },
       {
-        name: 'bruno',
+        name: 'Bruno',
         actual: true,
         icon: 'bruno',
         techArea: this.techAreas[2]
@@ -304,6 +304,24 @@ export class TechsService {
         actual: true,
         icon: 'pinecone',
         techArea: this.techAreas[1]
+      },
+      {
+        name: 'Firestore',
+        actual: true,
+        icon: 'firestore',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Redis',
+        actual: true,
+        icon: 'redis',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Upstash',
+        actual: true,
+        icon: 'upstash',
+        techArea: this.techAreas[2]
       },
     ]
 
