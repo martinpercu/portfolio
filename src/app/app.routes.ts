@@ -9,6 +9,7 @@ import { Chat2Component } from '@chat2/chat2.component';
 import { Chat3Component } from '@chat3/chat3.component';
 import { ResumePdfComponent } from './domains/resume-pdf/resume-pdf.component';
 import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.component';
+import { AcutePdfComponent } from './domains/acute-pdf/acute-pdf.component';
 
 
 export const routes: Routes = [
@@ -43,5 +44,9 @@ export const routes: Routes = [
   {
     path: 'resume',
     component: ResumePdfComponent
+  },
+  {
+    path: 'acute',
+    component: AcutePdfComponent
   },
 ];

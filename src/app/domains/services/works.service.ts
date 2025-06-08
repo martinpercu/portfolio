@@ -48,7 +48,8 @@ export class WorksService {
         // youtube_text: 'TEXT YOUTUBE',
         // youtube: 'https://youtube.com',
         extra_link: 'The "Acute Graft Versus Host Disease (AGvHD) Guidelines" document use to train this test assistant',
-        extra_link_text: 'https://any.curbsidehealth.com/text-documents/1905/preview?uuid=139882fe-2165-5758-bc07-f154a3b6e329',
+        extra_link_text: 'https://martin-e-mendez.web.app/acute',
+        // extra_link_text: 'https://any.curbsidehealth.com/text-documents/1905/preview?uuid=139882fe-2165-5758-bc07-f154a3b6e329',
         // extra_link2: 'The doc use to train this test assistant',
         // extra_link2_text: 'https://any.curbsidehealth.com/text-documents/1905/preview?uuid=139882fe-2165-5758-bc07-f154a3b6e329'
       },
