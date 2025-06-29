@@ -98,7 +98,7 @@ export class TechsService {
       {
         name: 'Firestore',
         actual: true,
-        icon: 'firebase',
+        icon: 'firestore',
         techArea: this.techAreas[1]
       },
       {
