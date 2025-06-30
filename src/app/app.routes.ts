@@ -12,9 +12,19 @@ import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.
 import { AcutePdfComponent } from './domains/acute-pdf/acute-pdf.component';
 import { CertificationsComponent } from './domains/certifications/certifications.component';
 import { CertificationsStorageComponent } from './domains/certifications-storage/certifications-storage.component';
+import { ResourcesStorageComponent } from '@domains/resources-storage/resources-storage.component';
+import { RedirecterComponent } from '@domains/redirecter/redirecter.component';
 
 
 export const routes: Routes = [
+  {
+    path: 'figma',
+    component: RedirecterComponent
+  },
+  {
+    path: 'resources/:name',
+    component: ResourcesStorageComponent
+  },
   {
     path: 'cert/:name',
     component: CertificationsStorageComponent

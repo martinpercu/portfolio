@@ -40,6 +40,7 @@
       "@chat/*": ["./src/app/domains/chat/*"],
       "@chat2/*": ["./src/app/domains/chat2/*"],
       "@chat3/*": ["./src/app/domains/chat3/*"],
+      "@domains/*": ["./src/app/domains/*"],
     }
   },
   "angularCompilerOptions": {
