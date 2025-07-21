@@ -1,0 +1,18 @@
+meta {
+  name: PROD message_test_stream_id
+  type: http
+  seq: 9
+}
+
+post {
+  url: https://fastapi-chat-5ewd.onrender.com/chat_a_stream_id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hola, Que tal?",
+    "assistant_id": "asst_YPuH1T2frcyhAlXJZ0ibz2lg"
+  }
+}
