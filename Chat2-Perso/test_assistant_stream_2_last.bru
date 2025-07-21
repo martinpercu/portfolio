@@ -1,0 +1,17 @@
+meta {
+  name: test_assistant_stream_2_last
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/chat_a_last
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hola que tal ??"
+  }
+}
