@@ -10,13 +10,23 @@ import { Chat3Component } from '@chat3/chat3.component';
 import { ResumePdfComponent } from './domains/resume-pdf/resume-pdf.component';
 import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.component';
 import { AcutePdfComponent } from './domains/acute-pdf/acute-pdf.component';
+import { PdfCertiComponent } from '@certi/pdf-certi.component';
+import { PdfPedagogicComponent } from './domains/pdf-pedagogic/pdf-pedagogic.component';
 
 
 export const routes: Routes = [
   {
-    path: 'ia',
-    component: ProjectsIaComponent
+    path: 'cert/:pdfname',
+    component: PdfCertiComponent
   },
+  {
+    path: 'certification/:pdfname',
+    component: PdfPedagogicComponent
+  },
+  // {
+  //   path: 'ia',
+  //   component: ProjectsIaComponent
+  // },
   {
     path: 'works',
     component: WorkContainerComponent

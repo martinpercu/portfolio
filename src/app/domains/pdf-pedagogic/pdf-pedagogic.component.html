@@ -1,0 +1,28 @@
+  <div class="flex flex-col h-screen">
+
+  <div class="flex-grow flex items-center justify-center bg-gray-800 overflow-hidden">
+    @if(isLoading){
+      <div class="loading-message text-white p-4 bg-blue-600 rounded-lg shadow-lg">
+        Cargando PDF... Por favor, espera.
+      </div>
+    }
+
+    @if(error){
+      <div class="error-message text-white p-4 bg-red-600 rounded-lg shadow-lg">
+        <p>¡Ups! Ha ocurrido un error:</p>
+        <p>{{ error }}</p>
+        <p>Por favor, verifica el nombre del archivo o inténtalo de nuevo más tarde.</p>
+      </div>
+    }
+
+    @if(pdfUrl){
+      <iframe
+        [src]="pdfUrl"
+        frameborder="0"
+        class="w-full h-full"
+        allowfullscreen
+        title="Visor de Certificado PDF"
+      ></iframe>
+    }
+  </div>
+</div>
