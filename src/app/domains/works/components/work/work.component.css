@@ -1,0 +1,9 @@
+.navActive {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.dark .navActive {
+  font-weight: 600;
+  text-decoration: underline;
+}

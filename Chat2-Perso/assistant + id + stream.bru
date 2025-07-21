@@ -1,0 +1,19 @@
+meta {
+  name: assistant + id + stream
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:3000/chat_a_stream_id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "What is my name ?",
+    "thread_id": "thread_ayX8XvMG7cSB9j6pmptQL8U7",
+    "assistant_id": "asst_94D3ubdfJOAOKm2oPshllYRJ"
+  }
+}
