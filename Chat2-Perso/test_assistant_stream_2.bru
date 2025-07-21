@@ -1,0 +1,17 @@
+meta {
+  name: test_assistant_stream_2
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:3000/chat_a_stream_2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hola que tal ??"
+  }
+}
