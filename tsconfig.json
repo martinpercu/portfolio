@@ -21,7 +21,28 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths":{
+      "@body/*": ["./src/app/domains/body/*"],
+      "@header/*": ["./src/app/domains/header/*"],
+      "@models/*": ["./src/app/domains/models/*"],
+      "@shared/*": ["./src/app/domains/shared/*"],
+      "@works/*": ["./src/app/domains/works/*"],
+      "@myself/*": ["./src/app/domains/myself/*"],
+      "@techs/*": ["./src/app/domains/techs/*"],
+      "@projects/*": ["./src/app/domains/projects/*"],
+      "@projects-ia/*": ["./src/app/domains/projects-ia/*"],
+      "@services/*": ["./src/app/domains/services/*"],
+      "@about/*": ["./src/app/domains/about/*"],
+      "@footer/*": ["./src/app/domains/footer/*"],
+      "@contact/*": ["./src/app/domains/contact/*"],
+      "@icons/*": ["./src/*"],
+      "@chat/*": ["./src/app/domains/chat/*"],
+      "@chat2/*": ["./src/app/domains/chat2/*"],
+      "@chat3/*": ["./src/app/domains/chat3/*"],
+      "@certi/*": ["./src/app/domains/pdf-certi/*"],
+      "@env/*": ["./src/environments/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

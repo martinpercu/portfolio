@@ -1,0 +1,17 @@
+meta {
+  name: test-01-message
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:3000/chat
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hola me llamo Leandro"
+  }
+}

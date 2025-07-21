@@ -1,0 +1,127 @@
+
+<div class="flex flex-col h-screen">
+
+  <div class="flex-none bg-neutral-600 shadow-md z-10">
+    <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
+      <div class="bg-neutral-100 text-neutral-800 my-0.5 mx-auto h-8 px-4 sm:px-8 rounded-lg border-2 border-green-600 flex items-center space-x-8 sm:space-x-12">
+        @for(category of categories; track $index){
+          <div (click)="toggleCategory(category)"
+               class="hover:underline cursor-pointer transition-all duration-200 hover:scale-105"
+               [class.font-semibold]="selectedCategory === category"
+               [class.scale-105]="selectedCategory === category"
+               [class.underline]="selectedCategory === category">
+
+            {{category.name}}
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="bg-neutral-600">
+      @for (category of categories; track $index) {
+        @if (selectedCategory === category) {
+          <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
+            <div class="bg-neutral-700 text-white tracking-widest mx-auto h-8 px-4 sm:px-8 rounded-lg flex items-center sm:space-x-12 border-2 border-green-600">
+              @for (course of category.course; track course.name) {
+                <div (click)="viewPdf(course.pdfName)"
+                     class="cursor-pointer hover:underline transition-all duration-200 hover:scale-105"
+                     [class.underline]="pdfName === course.pdfName"
+                     [class.scale-105]="pdfName === course.pdfName">
+                  {{ course.name }}
+                </div>
+              }
+            </div>
+          </div>
+        }
+      }
+    </div>
+  </div>
+
+  <div class="flex-grow flex items-center justify-center bg-gray-800 overflow-hidden">
+    @if(isLoading){
+      <div class="loading-message text-white p-4 bg-blue-600 rounded-lg shadow-lg">
+        Cargando PDF... Por favor, espera.
+      </div>
+    }
+
+    @if(error){
+      <div class="error-message text-white p-4 bg-red-600 rounded-lg shadow-lg">
+        <p>¡Ups! Ha ocurrido un error:</p>
+        <p>{{ error }}</p>
+        <p>Por favor, verifica el nombre del archivo o inténtalo de nuevo más tarde.</p>
+      </div>
+    }
+
+    @if(pdfUrl){
+      <iframe
+        [src]="pdfUrl"
+        frameborder="0"
+        class="w-full h-full"
+        allowfullscreen
+        title="Visor de Certificado PDF"
+      ></iframe>
+    }
+  </div>
+
+</div>
+
+<!--
+<div class="flex flex-col h-screen">
+
+<div class="bg-neutral-600 flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
+  <div class="bg-neutral-100 text-neutral-800 my-0.5 m-auto h-8 gap-8 sm:gap-12 px-4 sm:px-8 rounded-lg border-2 border-green-600 flex items-center">
+    @for(category of categories; track $index){
+      <div  (click)="toggleCategory(category)"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105">
+      {{category.name}}
+    </div>
+    }
+  </div>
+</div>
+
+<div class="bg-neutral-600">
+  @for (category of categories; track $index) {
+    @if (selectedCategory === category) {
+    <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
+      <div class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg flex items-center border-2 border-green-600">
+      @for (course of category.course; track course.name) {
+        <div (click)="viewPdf(course.pdfName)"
+          class="cursor-pointer hover:underline hover:transition hover:scale-105">
+          {{ course.name }}
+        </div>
+      }
+      </div>
+    </div>
+    }
+  }
+</div>
+
+
+
+  <div class="flex-grow flex items-center justify-center bg-gray-800 overflow-hidden">
+  @if(isLoading){
+  <div class="loading-message">
+    Cargando PDF... Por favor, espera.
+  </div>
+  }
+
+  @if(error){
+  <div class="error-message">
+    <p>¡Ups! Ha ocurrido un error:</p>
+    <p>{{ error }}</p>
+    <p>Por favor, verifica el nombre del archivo o inténtalo de nuevo más tarde.</p>
+  </div>
+  }
+
+  @if(pdfUrl){
+    <iframe
+      [src]="pdfUrl"
+      frameborder="0"
+      class="w-full h-full"
+      allowfullscreen
+      title="Visor de Certificado PDF"
+    ></iframe>
+  }
+</div>
+
+</div> -->
