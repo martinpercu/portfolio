@@ -2,3 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon-Nav {
+  display: block !important;
+}
+
+.iconLightMode {
+  color: rgb(0, 0, 0);
+  /* fill: red !important;
+  stroke-width: 1px !important;
+  height: 50px !important;
+  width: 50px !important; */
+}
+
+.iconDarktMode {
+  color: rgb(88, 209, 60);
+}
+

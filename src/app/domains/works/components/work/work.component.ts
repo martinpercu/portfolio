@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { Work } from '@models/work.model'
+import { Work } from '@models/work.model';
+
 
 @Component({
   selector: 'app-work',
@@ -11,6 +12,18 @@ import { Work } from '@models/work.model'
 })
 export class WorkComponent {
   @Input({required: true}) work!: Work;
+
+  choiceNav: string = '';
+
+
+  constructor() {
+    this.choiceNav = 'description'
+  }
+
+  setTheChoice(choice: string) {
+    console.log(choice);
+    this.choiceNav = choice
+  }
 
 
 }

@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-btn',
   standalone: true,
   imports: [],
-  templateUrl: './btn.component.html',
-  styleUrl: './btn.component.css'
+  templateUrl: './btn.component.html'
 })
 export class BtnComponent {
 
