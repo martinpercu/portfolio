@@ -1,3 +1,5 @@
+import { Tech } from './tech.model';
+
 export interface Work {
   id: string,
   title: string;
@@ -6,7 +8,9 @@ export interface Work {
   solution?: string;
   image: string;
   year: number;
-  techs: string[];
+  // techs: string[];
+  techs: Tech[];
+  techs2nd?: Tech[];
   frontend: boolean;
   backend: boolean;
   githubUrl?: string;

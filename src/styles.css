@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .icon-Nav {
   display: block !important;
 }
@@ -16,6 +17,11 @@
 }
 
 .iconDarktMode {
-  color: rgb(88, 209, 60);
+  /* color: rgb(88, 209, 60); */
+  @apply text-green-200
 }
 
+
+html {
+  scroll-behavior: smooth;
+}

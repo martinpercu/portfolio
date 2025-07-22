@@ -9,12 +9,17 @@ import { MyselfComponent } from '@myself/pages/myself/myself.component';
 
 import { IconsModule } from './../../../icon.module';
 
+// import { Navigation } from '@angular/router';
+
+// import {navigate} from '@angular/core';
+
 
 @Component({
   selector: 'app-body',
   standalone: true,
   imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule],
-  templateUrl: './body.component.html'
+  templateUrl: './body.component.html',
+  styleUrl: './body.component.css'
 })
 export class BodyComponent {
 
@@ -35,6 +40,10 @@ export class BodyComponent {
 
   // ngOnChanges() {
   //   window.localStorage.setItem('darkMode', JSON.stringify(this.darkMode()));
+  // }
+
+  // clickNav(param: any) {
+  //   this.navigate(param);
   // }
 
 

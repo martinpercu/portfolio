@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 
 import { Work } from '@models/work.model';
+
 
 
 @Component({
@@ -12,6 +13,7 @@ import { Work } from '@models/work.model';
 })
 export class WorkComponent {
   @Input({required: true}) work!: Work;
+
 
   choiceNav: string = '';
 
