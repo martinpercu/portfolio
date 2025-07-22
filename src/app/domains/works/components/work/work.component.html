@@ -1,0 +1,34 @@
+<!-- <p>work works!</p> -->
+
+<!-- <div class="group rounded-3xl border max-w-2xl">
+  <div href="#" class="overflow-hidden rounded-t-lg">
+      <img [src]="work.image" [alt]="work.title" class="object-cover object-center group-hover:opacity-60">
+  </div>
+  <div class="flex flex-col file: space-y-2 p-4 text-lg text-gray-700">
+    <div>
+      {{ work.title }}
+    </div>
+    <div class="text-end font-medium">
+     {{ work.year }}
+    </div>
+    <p class="text-xs font-medium text-gray-500">Added {{ work.year }}</p>
+    <button class="text-black bg-gray-100 shadow-md font-medium rounded-md text-sm px-5 py-2.5 w-full"
+    >This is a button
+    </button>
+  </div>
+</div> -->
+
+
+<div class="flex bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <img [src]="work.image" [alt]="work.title"  class="object-cover p-2 w-48">
+  <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ work.title }}  -  {{ work.year }} - {{ work.size }} </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ work.description }}</p>
+      <div class="flex flex-row gap-2">
+        @for (tech of work.techs; track $index) {
+          <div>{{ tech }}</div>
+        }
+      </div>
+  </div>
+</div>
+
