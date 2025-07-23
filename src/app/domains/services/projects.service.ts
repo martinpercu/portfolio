@@ -49,7 +49,7 @@ export class ProjectsService {
         webdev_text: 'This is the provisional Dash for Admin.',
         webdev: 'https://trainer-teacher.web.app/main',
         web_text: 'This link redirect to a chat teacher only.',
-        web: 'https://trainer-teacher.web.app',
+        web: 'https://trainer-teacher.web.app/teacher/ff7AU0O2lWNlz6Yx9BNg',
         // youtube_text: 'TEXT YOUTUBE',
         // youtube: 'https://youtube.com',
         // extra_link: 'the extra link',
