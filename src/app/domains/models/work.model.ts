@@ -8,11 +8,22 @@ export interface Work {
   solution?: string;
   image: string;
   year: number;
-  // techs: string[];
   techs: Tech[];
-  techs2nd?: Tech[];
+  techs2nd: Tech[];
   frontend: boolean;
   backend: boolean;
-  githubUrl?: string;
-  youtubeLink?: string;
+  github?: string;
+  github_text?: string;
+  github2nd?: string;
+  github2nd_text?: string;
+  web_text?: string;
+  web?: string;
+  webdev_text?: string;
+  webdev?: string;
+  youtube?: string;
+  youtube_text?: string;
+  youtube2nd?: string;
+  youtube2nd_text?: string;
+  extra_link?: string;
+  extra_link_text?: string;
 }

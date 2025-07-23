@@ -1,17 +1,35 @@
 import { NgModule } from '@angular/core';
 
 import { TablerIconsModule } from 'angular-tabler-icons';
-import { IconCamera, IconHeart, IconBrandGithub, IconSun, IconMoon, IconBrandLinkedin, IconMailFast } from 'angular-tabler-icons/icons';
+import {
+  IconCamera, IconHeart, IconBrandGithub, IconSun, IconMoon, IconBrandLinkedin, IconMailFast, IconBrandGit,
+  IconSourceCode, IconBrandStackshare, IconCodeCircle, IconCodeCircle2, IconFileExport,
+  IconFileLike, IconFileTypeDoc, IconLink, IconCode, IconCodeDots, IconBrandYoutube,
+  IconBrandGithubFilled
+ } from 'angular-tabler-icons/icons';
 
 // Select some icons (use an object, not an array)
 const icons = {
   IconCamera,
   IconHeart,
   IconBrandGithub,
+  IconBrandGithubFilled,
   IconSun,
   IconMoon,
   IconBrandLinkedin,
-  IconMailFast
+  IconMailFast,
+  IconBrandGit,
+  IconBrandYoutube,
+  IconSourceCode,
+  IconBrandStackshare,
+  IconCodeCircle,
+  IconCodeCircle2,
+  IconFileExport,
+  IconFileLike,
+  IconFileTypeDoc,
+  IconLink,
+  IconCode,
+  IconCodeDots
 };
 
 @NgModule({

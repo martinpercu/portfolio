@@ -7,7 +7,7 @@ import { TechsComponent } from '@techs/techs.component';
 import { ProjectsComponent } from '@projects/pages/projects/projects.component';
 import { MyselfComponent } from '@myself/pages/myself/myself.component';
 
-import { IconsModule } from './../../../icon.module';
+import { IconsModule } from '@icons/icon.module';
 
 // import { Navigation } from '@angular/router';
 
