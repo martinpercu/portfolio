@@ -263,6 +263,12 @@ export class TechsService {
         icon: 'emailjs',
         techArea: this.techAreas[2]
       },
+      {
+        name: 'Vercel',
+        actual: true,
+        icon: 'vercel',
+        techArea: this.techAreas[2]
+      },
     ]
 
    }

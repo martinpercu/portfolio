@@ -5,7 +5,15 @@ import {
   IconCamera, IconHeart, IconBrandGithub, IconSun, IconMoon, IconBrandLinkedin, IconMailFast, IconBrandGit,
   IconSourceCode, IconBrandStackshare, IconCodeCircle, IconCodeCircle2, IconFileExport,
   IconFileLike, IconFileTypeDoc, IconLink, IconCode, IconCodeDots, IconBrandYoutube,
-  IconBrandGithubFilled
+  IconBrandGithubFilled,
+  IconArrowRight,
+  IconArrowLeft,
+  IconArrowUp,
+  IconArrowDown,
+  IconX,
+  IconSquareRoundedX,
+  IconCaretRight,
+  IconSquareRoundedArrowRight
  } from 'angular-tabler-icons/icons';
 
 // Select some icons (use an object, not an array)
@@ -29,7 +37,15 @@ const icons = {
   IconFileTypeDoc,
   IconLink,
   IconCode,
-  IconCodeDots
+  IconCodeDots,
+  IconArrowRight,
+  IconArrowLeft,
+  IconArrowUp,
+  IconArrowDown,
+  IconX,
+  IconSquareRoundedX,
+  IconCaretRight,
+  IconSquareRoundedArrowRight
 };
 
 @NgModule({

@@ -1,22 +1,9 @@
 .navActive {
   font-weight: 600;
   text-decoration: underline;
-};
-
-.dark .navActive {
-  color: green;
-}
-/*
-.dark .hamburgerTop,
-.dark .hamburgerMiddle, */
-.dark .navActive {
-  color: green;
 }
 
-@media (prefers-color-scheme: dark) {
-  .navActive,
-  .hamburgerMiddle,
-  .hamburgerBottom {
-    color: green;
-  }
+.dark .navActive {
+  font-weight: 600;
+  text-decoration: underline;
 }
