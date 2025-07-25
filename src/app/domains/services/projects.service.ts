@@ -39,6 +39,20 @@ export class ProjectsService {
         webUrl: 'https://store-angular-17-six.vercel.app/'
       },
       {
+        title: 'React basic E-Commerce',
+        description: 'Just a basic e-commerce to practice how react works.',
+        year: 2024,
+        image: 'react-store',
+        techs: [this.techs[42], this.techs[6], this.techs[25], this.techs[26]],
+        techs2nd: [this.techs[2], this.techs[3], this.techs[4]],
+        frontend: true,
+        backend: false,
+        githubOk: true,
+        githubUrl: 'https://github.com/martinpercu/store-in-react',
+        webOk: true,
+        webUrl: 'https://a-a-store-in-react.netlify.app'
+      },
+      {
         title: 'Todo list Angular Signals',
         description: 'Just the well know "to do list" but using new signals() for the Angular framework.',
         year: 2023,

@@ -269,6 +269,24 @@ export class TechsService {
         icon: 'vercel',
         techArea: this.techAreas[2]
       },
+      {
+        name: 'NEXT.JS',
+        actual: true,
+        icon: 'nextjs',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'OpenAI',
+        actual: true,
+        icon: 'openai',
+        techArea: this.techAreas[3]
+      },
+      {
+        name: 'React',
+        actual: true,
+        icon: 'react',
+        techArea: this.techAreas[2]
+      },
     ]
 
    }

@@ -36,6 +36,7 @@
       "@footer/*": ["./src/app/domains/footer/*"],
       "@contact/*": ["./src/app/domains/contact/*"],
       "@icons/*": ["./src/*"],
+      "@chat/*": ["./src/app/domains/chat/*"],
     }
   },
   "angularCompilerOptions": {
