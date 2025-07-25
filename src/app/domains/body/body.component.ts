@@ -6,6 +6,8 @@ import { HeaderComponent } from '@header/header.component';
 import { TechsComponent } from '@techs/techs.component';
 import { ProjectsComponent } from '@projects/pages/projects/projects.component';
 import { MyselfComponent } from '@myself/pages/myself/myself.component';
+import { AboutComponent } from '@about/about.component';
+import { FooterComponent } from '@footer/footer.component';
 
 import { IconsModule } from '@icons/icon.module';
 
@@ -17,7 +19,7 @@ import { IconsModule } from '@icons/icon.module';
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule],
+  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule, AboutComponent, FooterComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })

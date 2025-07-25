@@ -8,14 +8,15 @@ import { images } from "@works/images/images";
 
 import { WorksService } from '@services/works.service';
 
-
+import { IconsModule } from '@icons/icon.module';
 
 
 @Component({
     selector: 'app-work-container',
     standalone: true,
+    imports: [WorkComponent, IconsModule],
     templateUrl: './work-container.component.html',
-    imports: [WorkComponent]
+    styleUrl: './work-container.component.css'
 })
 export class WorkContainerComponent {
 
