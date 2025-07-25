@@ -7,7 +7,7 @@
 
       <div class="flex gap-4 mb-4">
         <img class="size-12 sm:size-14 md:size-16 rounded-full shadow-md shadow-black dark:shadow-green-400 "
-          src="./../../../../../assets/img/avatar-01.jpg" alt="Martin Pic.">
+          src="./../../../../../assets/img/avatar-01-web.jpg" alt="Martin Pic.">
 
         <!-- <div class="flex items-center animate-bounce"> -->
         <div class="flex items-center">
@@ -46,11 +46,17 @@
 
       <div class="text-sm sm:text-base gap-1 flex flex-wrap sm:gap-4 mt-8">
 
-        <a href="mailto:martinpercu@gmail.com" target="_blank"
+        <div (click)="openContactForm()"
+          class="cursor-pointer rounded-md inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-1 text-gray-800 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-green-200 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+          <i-tabler class="m-auto" name="mail-fast"></i-tabler>
+          Contact
+        </div>
+
+        <!-- <a href="mailto:martinpercu@gmail.com" target="_blank"
           class="rounded-md inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-1 text-gray-800 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-green-200 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
           <i-tabler class="m-auto" name="mail-fast"></i-tabler>
           Contact
-        </a>
+        </a> -->
         <a href="https://www.linkedin.com/in/martin-e-mendez-3a43b564" target="_blank"
           class="rounded-md inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-1 text-gray-800 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-green-200 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
           <i-tabler class="m-auto scale-90 " name="brand-linkedin"></i-tabler>

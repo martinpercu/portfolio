@@ -1,0 +1,17 @@
+meta {
+  name: message-1
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/chat
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "hola hola"
+  }
+}

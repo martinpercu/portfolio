@@ -25,3 +25,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+.contactInputs {
+  @apply w-full rounded-md border-2 dark:border-green-400 text-gray-600 dark:text-gray-800 pl-4 py-2 dark:bg-green-50 bg-gray-50;
+}
+
+
+input:focus-visible {
+  @apply outline-double dark:outline-gray-600 outline-gray-400
+}
+
+input:checked {
+  @apply dark:accent-green-400 accent-gray-700
+}

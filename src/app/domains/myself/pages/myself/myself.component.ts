@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { IconsModule } from './../../../../../icon.module';
 
@@ -10,5 +10,12 @@ import { IconsModule } from './../../../../../icon.module';
   templateUrl: './myself.component.html'
 })
 export class MyselfComponent {
+
+  @Output() contactHandler = new EventEmitter();
+
+
+  openContactForm() {
+    this.contactHandler.emit(true);
+  }
 
 }
