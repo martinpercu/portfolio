@@ -1,0 +1,19 @@
+meta {
+  name: RAG-stream-basico
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/stream_chat
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Napoleon fue un gran hombre?", 
+    "session_id": "session_loca"
+    
+  }
+}

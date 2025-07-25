@@ -1,0 +1,18 @@
+meta {
+  name: test_openai_request
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/test_openai
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "DEsdf q Hola tal ??",
+    "assistant_id": "asst_94D3ubdfJOAOKm2oPshllYRJ"
+  }
+}
