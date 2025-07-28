@@ -7,6 +7,7 @@ import { ProjectsComponent } from '@projects/pages/projects/projects.component';
 import { ChatComponent } from '@chat/chat.component';
 import { Chat2Component } from '@chat2/chat2.component';
 import { Chat3Component } from '@chat3/chat3.component';
+import { ResumePdfComponent } from './domains/resume-pdf/resume-pdf.component';
 
 
 export const routes: Routes = [
@@ -33,5 +34,9 @@ export const routes: Routes = [
   {
     path: 'chat3',
     component: Chat3Component
+  },
+  {
+    path: 'resume',
+    component: ResumePdfComponent
   },
 ];
