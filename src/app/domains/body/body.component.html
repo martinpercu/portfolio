@@ -21,6 +21,8 @@ w-full
 
           <!-- <a href="#myself" class="hover:underline hover:transition hover:scale-105">Myself</a> -->
           <a href="#works" class="hover:underline hover:transition hover:scale-105">Works</a>
+          <a href="#ai" class="hover:underline hover:transition hover:scale-105">AI</a>
+          <!-- <a href="#works" class="hover:underline hover:transition hover:scale-105">Works</a> -->
           <a href="#proyects" class="hover:underline hover:transition hover:scale-105">Projects</a>
           <a href="#about" class="hover:underline hover:transition hover:scale-105">About Me</a>
 
@@ -57,8 +59,13 @@ w-full
     <app-myself (contactHandler)="updateShowStatus($event)"></app-myself>
   </div>
 
+
   <div id="works" class="pt-16">
     <app-work-container></app-work-container>
+  </div>
+
+  <div id="ai" class="pt-16">
+    <app-projects-ia></app-projects-ia>
   </div>
 
   <div id="proyects" class="pt-16">

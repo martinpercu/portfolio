@@ -1,19 +1,19 @@
-import { Component, Input, inject, HostBinding } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { Work } from '@models/work.model';
+import { Project_IA } from '@models/project_ia.model';
 
 import { IconsModule } from '@icons/icon.module';
 
 
 @Component({
-  selector: 'app-work',
+  selector: 'app-project-ia',
   standalone: true,
   imports: [IconsModule],
-  templateUrl: './work.component.html',
-  styleUrl: './work.component.css'
+  templateUrl: './project-ia.component.html',
+  styleUrl: './project-ia.component.css'
 })
-export class WorkComponent {
-  @Input({required: true}) work!: Work;
+export class ProjectIaComponent {
+  @Input({required: true}) project_ia!: Project_IA;
 
 
   choiceNav: string = 'description';
@@ -59,6 +59,5 @@ export class WorkComponent {
       this.showExtraInfo = true;
     }, 1);
   }
-
 
 }

@@ -11,6 +11,7 @@ import { IconsModule } from '@icons/icon.module';
   imports: [IconsModule],
   templateUrl: './project.component.html'
 })
+
 export class ProjectComponent {
   @Input({required: true}) project!: Project;
 

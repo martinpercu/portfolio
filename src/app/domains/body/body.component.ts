@@ -10,6 +10,9 @@ import { AboutComponent } from '@about/about.component';
 import { FooterComponent } from '@footer/footer.component';
 import { ContactComponent } from '@contact/contact.component';
 
+
+import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.component';
+
 import { IconsModule } from '@icons/icon.module';
 
 
@@ -21,7 +24,7 @@ import { IconsModule } from '@icons/icon.module';
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule, AboutComponent, FooterComponent, ContactComponent],
+  imports: [WorkContainerComponent, HeaderComponent, TechsComponent, ProjectsComponent, MyselfComponent, IconsModule, AboutComponent, FooterComponent, ContactComponent, ProjectsIaComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })

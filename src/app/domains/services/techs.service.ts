@@ -98,7 +98,7 @@ export class TechsService {
       {
         name: 'Firestore',
         actual: true,
-        icon: 'firebase',
+        icon: 'firestore',
         techArea: this.techAreas[1]
       },
       {
@@ -150,7 +150,7 @@ export class TechsService {
         techArea: this.techAreas[2]
       },
       {
-        name: 'bruno',
+        name: 'Bruno',
         actual: true,
         icon: 'bruno',
         techArea: this.techAreas[2]
@@ -285,6 +285,42 @@ export class TechsService {
         name: 'React',
         actual: true,
         icon: 'react',
+        techArea: this.techAreas[2]
+      },
+      {
+        name: 'Python',
+        actual: true,
+        icon: 'python',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Langchain',
+        actual: true,
+        icon: 'langchain',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Pinecone',
+        actual: true,
+        icon: 'pinecone',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Firestore',
+        actual: true,
+        icon: 'firestore',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Redis',
+        actual: true,
+        icon: 'redis',
+        techArea: this.techAreas[1]
+      },
+      {
+        name: 'Upstash',
+        actual: true,
+        icon: 'upstash',
         techArea: this.techAreas[2]
       },
     ]

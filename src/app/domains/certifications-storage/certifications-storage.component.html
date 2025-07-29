@@ -1,0 +1,397 @@
+@if(currentView) {
+
+<div
+  class="bg-neutral-600 flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-100 text-neutral-800 my-0.5 m-auto h-8 gap-8 sm:gap-12 px-4 sm:px-8 rounded-lg border-2 border-green-600 flex items-center"
+  >
+    <div
+      (click)="setView('ai')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'ai'}"
+    >
+      AI
+    </div>
+    <div
+      (click)="setView('frameworks')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'frameworks'}"
+    >
+      Angular
+    </div>
+    <div
+      (click)="setView('back')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'back'}"
+    >
+      Back End
+    </div>
+    <div
+      (click)="setView('python')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'python'}"
+    >
+      Python
+    </div>
+    <div
+      (click)="setView('db')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'db'}"
+    >
+      Database
+    </div>
+    <div
+      (click)="setView('others')"
+      class="hover:underline cursor-pointer hover:transition hover:scale-105"
+      [ngClass]="{'scale-110 font-semibold underline': currentView === 'others'}"
+    >
+      Others
+    </div>
+  </div>
+
+</div>
+
+<div class="bg-neutral-600 ">
+
+@if (currentView === 'frameworks') {
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600"
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-17')"
+    >
+      v. 17
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-16')"
+    >
+      v. 16
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-apis')"
+    >
+      APIsREST
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-auth')"
+    >
+      Auth
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-components')"
+    >
+      Components
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-modular')"
+    >
+      Modular
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-trello')"
+    >
+      Trello
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-tailwind')"
+    >
+      Tailwind
+    </div>
+  </div>
+</div>
+}
+@if (currentView === 'back') {
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600 "
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('db-introduccion')"
+    >
+      Intro
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-nodejs-expressjs')"
+    >
+      Node.JS-ApiREST
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-nodejs-fundaments')"
+    >
+      Node.JS
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-fastapi-introduccion')"
+    >
+      FastAPI
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-fastapi-data-modularization')"
+    >
+      FastAPI modular
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-fastapi-errores')"
+    >
+      FastAPI A
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-fastapi-fundaments')"
+    >
+      FastAPI B
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-django-mid')"
+    >
+      Django testing
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('back-flask')"
+    >
+      Flask
+    </div>
+  </div>
+</div>
+}
+@if (currentView === 'python') {
+
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600 "
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-basic')"
+    >
+      Intro
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-cs')"
+    >
+      CS
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-functions')"
+    >
+      Functions
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-fundaments')"
+    >
+      Fundaments
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-intermedio')"
+    >
+      Medium
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-pip')"
+    >
+      Pip
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-practic-crud')"
+    >
+      CRUD
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('python-pro')"
+    >
+      Pro
+    </div>
+  </div>
+</div>
+
+}
+@if (currentView === 'db') {
+
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600 "
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('db-fundaments')"
+    >
+      Fundaments
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('db-mongodb')"
+    >
+      MongoDB
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('db-mongodb-modeling')"
+    >
+      MongoDB-Modeling
+    </div>
+  </div>
+</div>
+
+}
+@if (currentView === 'ai') {
+
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600 "
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('ai-agentes-ai')"
+    >
+      Agents (LLM+RAG)
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('ai-openai-api')"
+    >
+      Chatbot + OpenAI
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('ai-azureopenia')"
+    >
+      Azure + OpenAI
+    </div>
+  </div>
+</div>
+
+}
+@if (currentView === 'others') {
+
+<div
+  class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between"
+>
+  <div
+    class="bg-neutral-700 text-white tracking-widest mt-0 m-auto h-8 gap-6 sm:gap-12 px-4 sm:px-8 rounded-lg  flex items-center border-2 border-green-600 "
+  >
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('git-github')"
+    >
+      Git-Github
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('terminal')"
+    >
+      Terminal
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('react-vite-tailwind')"
+    >
+      React
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('vue-intro')"
+    >
+      Vue
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('vue-componentes-composition')"
+    >
+      Vue Components
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('vue-practico')"
+    >
+      Vue Practic
+    </div>
+    <div
+      class="cursor-pointer hover:underline hover:transition hover:scale-105"
+      (click)="loadAndDisplayPdf('angular-ionic')"
+    >
+      Ionic
+    </div>
+  </div>
+</div>
+
+}
+</div>
+
+
+
+}
+
+<div class="pdf-wrapper">
+  @if (isLoading) {
+  <div class="loading-spinner">
+    <p>Cargando certificación...</p>
+  </div>
+  } @if (pdfUrl) {
+  <div class="h-dvh">
+    <embed [src]="pdfUrl" type="application/pdf" class="pdf-content" />
+  </div>
+  } @if (!isLoading && !pdfUrl) {
+  <div class="error-message">
+    <p>
+      Lo sentimos, no se pudo encontrar la certificación "{{
+        certificationName
+      }}".
+    </p>
+  </div>
+  }
+</div>
+
+<!-- <div class="pdf-wrapper">
+  @if (isLoading) {
+    <div class="loading-spinner">
+      <p>Cargando certificación...</p>
+    </div>
+  } @if (pdfUrl) {
+    <div class="h-dvh">
+      <a [href]="pdfUrl" target="_blank" rel="noopener noreferrer" class="pdf-link">
+        Abrir certificación
+      </a>
+    </div>
+  } @if (!isLoading && !pdfUrl) {
+    <div class="error-message">
+      <p>
+        Lo sentimos, no se pudo encontrar la certificación "{{ certificationName }}".
+      </p>
+    </div>
+  }
+</div> -->

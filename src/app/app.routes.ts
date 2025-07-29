@@ -8,9 +8,25 @@ import { ChatComponent } from '@chat/chat.component';
 import { Chat2Component } from '@chat2/chat2.component';
 import { Chat3Component } from '@chat3/chat3.component';
 import { ResumePdfComponent } from './domains/resume-pdf/resume-pdf.component';
+import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.component';
+import { AcutePdfComponent } from './domains/acute-pdf/acute-pdf.component';
+import { CertificationsComponent } from './domains/certifications/certifications.component';
+import { CertificationsStorageComponent } from './domains/certifications-storage/certifications-storage.component';
 
 
 export const routes: Routes = [
+  {
+    path: 'cert/:name',
+    component: CertificationsStorageComponent
+  },
+  {
+    path: 'cert',
+    component: CertificationsStorageComponent
+  },
+  {
+    path: 'ia',
+    component: ProjectsIaComponent
+  },
   {
     path: 'works',
     component: WorkContainerComponent
@@ -38,5 +54,13 @@ export const routes: Routes = [
   {
     path: 'resume',
     component: ResumePdfComponent
+  },
+  {
+    path: 'acute',
+    component: AcutePdfComponent
+  },
+  {
+    path: 'certification/:name',
+    component: CertificationsComponent
   },
 ];
