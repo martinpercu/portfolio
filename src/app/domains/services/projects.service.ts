@@ -88,18 +88,18 @@ export class ProjectsService {
 
     this.projects = [
       {
-        title: 'Angular 17 E-Commerce',
-        description: 'This is an upgrade from the other Angular ecommerce project using signal() for the checkout.',
+        title: 'Chat with 3 AI Agents',
+        description: 'AI platform features three agents. Napoleon, U.S. presidents, and Lisa—to provide focused, character-driven insights through unique personalities.',
         year: 2024,
-        image: 'store-17',
-        techs: [this.techs[0], this.techs[6], this.techs[39]],
-        techs2nd: [this.techs[5], this.techs[2], this.techs[3]],
+        image: 'super-agent-a',
+        techs: [this.techs[43], this.techs[16], this.techs[41], this.techs[44], this.techs[45], this.techs[6], this.techs[5]],
+        techs2nd: [],
         frontend: true,
-        backend: false,
+        backend: true,
         githubOk: true,
-        githubUrl: 'https://github.com/martinpercu/store-angular-17',
+        githubUrl: 'https://github.com/martinpercu/assistant-chat-frontend',
         webOk: true,
-        webUrl: 'https://store-angular-17-six.vercel.app/'
+        webUrl: 'https://super-assistants.web.app',
       },
       {
         title: 'React basic E-Commerce',
@@ -114,6 +114,20 @@ export class ProjectsService {
         githubUrl: 'https://github.com/martinpercu/store-in-react',
         webOk: true,
         webUrl: 'https://a-a-store-in-react.netlify.app'
+      },
+      {
+        title: 'Angular 17 E-Commerce',
+        description: 'This is an upgrade from the other Angular ecommerce project using signal() for the checkout.',
+        year: 2024,
+        image: 'store-17',
+        techs: [this.techs[0], this.techs[6], this.techs[39]],
+        techs2nd: [this.techs[5], this.techs[2], this.techs[3]],
+        frontend: true,
+        backend: false,
+        githubOk: true,
+        githubUrl: 'https://github.com/martinpercu/store-angular-17',
+        webOk: true,
+        webUrl: 'https://store-angular-17-six.vercel.app/'
       },
       // {
       //   title: 'Chat with Specialized Agents',
@@ -143,20 +157,6 @@ export class ProjectsService {
       //   // extra_link: 'the extra link',
       //   // extra_link_text: 'this text for EXTRA LINK'
       // },
-      {
-        title: 'Chat with 3 AI Agents',
-        description: 'AI platform features three agents. Napoleon, U.S. presidents, and Lisa—to provide focused, character-driven insights through unique personalities.',
-        year: 2024,
-        image: 'super-agent-a',
-        techs: [this.techs[43], this.techs[16], this.techs[41], this.techs[44], this.techs[45], this.techs[6], this.techs[5]],
-        techs2nd: [],
-        frontend: true,
-        backend: true,
-        githubOk: true,
-        githubUrl: 'https://github.com/martinpercu/assistant-chat-frontend',
-        webOk: true,
-        webUrl: 'https://super-assistants.web.app',
-      },
       {
         title: 'Money controller in VUE.js',
         description: 'An expense controller with a svg graph.',
