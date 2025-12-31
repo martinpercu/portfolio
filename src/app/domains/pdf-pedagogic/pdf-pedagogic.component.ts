@@ -28,8 +28,13 @@ export class PdfPedagogicComponent {
     const pdfNameParam = this.route.snapshot.paramMap.get('pdfname');
 
     if (pdfNameParam) {
-      this.pdfName = pdfNameParam;
-      console.log(`Nombre del PDF a cargar: ${this.pdfName}`);
+      console.log(`Nombre del PDF antes: ${this.pdfName}`);
+      this.pdfName = this.checkPathAndReplace(pdfNameParam);
+      console.log('pasado el tramite  ==>' + this.pdfName );
+      // this.pdfName = pdfNameParam;
+      // console.log(`Nombre del PDF a cargar: ${this.pdfName}`);
+
+
 
       try {
         // --- Uso de AngularFire Storage: 'this.storage' ya es la instancia ---
@@ -57,4 +62,28 @@ export class PdfPedagogicComponent {
       console.warn('No se encontró el parámetro "pdfname" en la URL.');
     }
   }
+
+
+  checkPathAndReplace(path: any) {
+    if (path === 'math-fundaments') {
+      return 'math-fundamentals';
+    }
+    if (path === 'probabilistics') {
+      return 'math-probabilistic';
+    }
+    if (path === 'algorithmic') {
+      return 'math-python-algorithmic';
+    }
+    if (path === 'statistics') {
+      return 'math-python-statistic';
+    }
+    if (path === 'python') {
+      return 'python-pro';
+    }
+    if (path === 'others') {
+      return 'react-vite-tailwind';
+    }
+    return path; // O input; o 'desconocido';
+  }
+
 }

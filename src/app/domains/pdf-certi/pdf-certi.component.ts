@@ -26,6 +26,7 @@ export class PdfCertiComponent {
   categories = [
     {
       name: 'AI',
+      mainPdfName: 'ai-agentes-ai',
       course: [
         { name: 'Agents (LLM+RAG)', pdfName: 'ai-agentes-ai' },
         { name: 'Chatbot + OpenAI', pdfName: 'ai-azureopenia' },
@@ -34,6 +35,7 @@ export class PdfCertiComponent {
     },
     {
       name: 'Angular',
+      mainPdfName: 'angular-tailwind',
       course: [
         { name: 'v.17', pdfName: 'angular-17' },
         { name: 'v.16', pdfName: 'angular-16' },
@@ -47,15 +49,13 @@ export class PdfCertiComponent {
     },
     {
       name: 'Back End',
+      mainPdfName: 'back-fastapi-data-modularization',
       course: [
         { name: 'Intro', pdfName: 'db-introduccion' },
         { name: 'Node.JS-ApiREST', pdfName: 'back-nodejs-expressjs' },
         { name: 'Node.JS', pdfName: 'back-nodejs-fundaments' },
         { name: 'FastAPI', pdfName: 'back-fastapi-introduccion' },
-        {
-          name: 'FastAPI modular',
-          pdfName: 'back-fastapi-data-modularization',
-        },
+        { name: 'FastAPI modular', pdfName: 'back-fastapi-data-modularization' },
         { name: 'FastAPI A', pdfName: 'back-fastapi-errores' },
         { name: 'FastAPI B', pdfName: 'back-fastapi-fundaments' },
         { name: 'Django testing', pdfName: 'back-django-mid' },
@@ -64,6 +64,7 @@ export class PdfCertiComponent {
     },
     {
       name: 'Python',
+      mainPdfName: 'python-pro',
       course: [
         { name: 'Intro', pdfName: 'python-basic' },
         { name: 'CS', pdfName: 'python-cs' },
@@ -77,6 +78,7 @@ export class PdfCertiComponent {
     },
     {
       name: 'Database',
+      mainPdfName: 'db-mongodb-modeling',
       course: [
         { name: 'Fundaments', pdfName: 'db-fundaments' },
         { name: 'MongoDB', pdfName: 'db-mongodb' },
@@ -85,8 +87,11 @@ export class PdfCertiComponent {
     },
     {
       name: 'Others',
+      mainPdfName: 'git-github',
       course: [
         { name: 'Git-Github', pdfName: 'git-github' },
+        { name: '.NET Fundaments', pdfName: 'dotnet-fundamentals' },
+        { name: '.NET Entity Framework', pdfName: 'dotnet-ef' },
         { name: 'Terminal', pdfName: 'terminal' },
         { name: 'React', pdfName: 'react-vite-tailwind' },
         { name: 'Vue', pdfName: 'vue-intro' },
@@ -112,7 +117,7 @@ export class PdfCertiComponent {
       console.log(`Nombre del PDF a cargar: ${this.pdfName}`);
       this.selectedCategory = this.getParentCategory(this.pdfName);
       console.log(this.selectedCategory);
-      this.toggleCategory(this.selectedCategory);
+      this.toggleCategoryFirstTime(this.selectedCategory);
 
       try {
         // --- Uso de AngularFire Storage: 'this.storage' ya es la instancia ---
@@ -141,10 +146,19 @@ export class PdfCertiComponent {
         this.pdfUrl = null; // Asegúrate de que la URL sea nula si hay un error.
       }
     } else {
-      this.error = 'No se especificó un nombre de PDF en la URL.';
-      this.isLoading = false;
-      console.warn('No se encontró el parámetro "pdfname" en la URL.');
+      this.viewPdf('dotnet-ef')
+      this.toggleCategoryFirstTime(this.categories[5])
+      // this.error = 'No se especificó un nombre de PDF en la URL.';
+      // this.isLoading = false;
+      // console.warn('No se encontró el parámetro "pdfname" en la URL.');
     }
+  }
+
+
+
+  toggleCategoryFirstTime(category: any): void {
+    this.selectedCategory = category; // Expande la nueva categoría
+    console.log('Categoría expandida:', category.name);
   }
 
   /**
@@ -156,7 +170,10 @@ export class PdfCertiComponent {
   toggleCategory(category: any): void {
     this.selectedCategory = category; // Expande la nueva categoría
     console.log('Categoría expandida:', category.name);
+    this.pdfName = category.mainPdfName;
+    this.loadPdf();
   }
+
 
   viewPdf(pdfName: string): void {
     if (pdfName) {
@@ -213,6 +230,7 @@ export class PdfCertiComponent {
     return null; // No se encontró el pdfName en ninguna categoría
   }
 
+  // Here ANY 'string in the object' ==> anyway toggleCategory() will select PDF
   checkPathAndReplace(path: any) {
     if (path === 'ai') {
       return 'ai-agentes-ai';
