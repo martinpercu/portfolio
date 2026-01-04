@@ -26,7 +26,7 @@ export class PdfCertiComponent {
   categories = [
     {
       name: 'AI',
-      mainPdfName: 'ai-langgraph',
+      mainPdfName: 'ai-agentes-ai',
       course: [
         { name: 'Agents Langgraph', pdfName: 'ai-langgraph' },
         { name: 'Agents (LLM+RAG)', pdfName: 'ai-agentes-ai' },
@@ -53,14 +53,13 @@ export class PdfCertiComponent {
       mainPdfName: 'back-fastapi-data-modularization',
       course: [
         { name: 'Intro', pdfName: 'db-introduccion' },
-        { name: 'OAuth2.0_JWT', pdfName: 'back-oauth' },
-        { name: 'FastAPI+Auth', pdfName: 'back-fastapi-introduccion' },
-        { name: 'FastAPI_modular', pdfName: 'back-fastapi-data-modularization' },
-        { name: 'FastAPI_A', pdfName: 'back-fastapi-errores' },
-        { name: 'FastAPI_B', pdfName: 'back-fastapi-fundaments' },
-        { name: 'Django_test', pdfName: 'back-django-mid' },
-        { name: 'Node.js', pdfName: 'back-nodejs-fundaments' },
-        { name: 'Node+Express.js', pdfName: 'back-nodejs-expressjs' },
+        { name: 'Node.JS-ApiREST', pdfName: 'back-nodejs-expressjs' },
+        { name: 'Node.JS', pdfName: 'back-nodejs-fundaments' },
+        { name: 'FastAPI', pdfName: 'back-fastapi-introduccion' },
+        { name: 'FastAPI modular', pdfName: 'back-fastapi-data-modularization' },
+        { name: 'FastAPI A', pdfName: 'back-fastapi-errores' },
+        { name: 'FastAPI B', pdfName: 'back-fastapi-fundaments' },
+        { name: 'Django testing', pdfName: 'back-django-mid' },
         { name: 'Flask', pdfName: 'back-flask' },
       ],
     },
@@ -85,6 +84,15 @@ export class PdfCertiComponent {
         { name: 'Pip', pdfName: 'python-pip' },
         { name: 'CRUD', pdfName: 'python-practic-crud' },
         { name: 'Pro', pdfName: 'python-pro' },
+      ],
+    },
+    {
+      name: 'Database',
+      mainPdfName: 'db-mongodb-modeling',
+      course: [
+        { name: 'Fundaments', pdfName: 'db-fundaments' },
+        { name: 'MongoDB', pdfName: 'db-mongodb' },
+        { name: 'MongoDB-Modeling', pdfName: 'db-mongodb-modeling' },
       ],
     },
     {

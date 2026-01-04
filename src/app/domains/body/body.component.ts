@@ -31,7 +31,7 @@ import { IconsModule } from '@icons/icon.module';
 export class BodyComponent {
 
   darkMode = signal<boolean>(
-    JSON.parse(window.localStorage.getItem('darkMode') ?? 'false')
+    JSON.parse(window.localStorage.getItem('darkMode') || 'false')
   );
 
   @HostBinding('class.dark') get mode() {
