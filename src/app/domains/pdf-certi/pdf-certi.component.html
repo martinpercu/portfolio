@@ -21,7 +21,7 @@
       @for (category of categories; track $index) {
         @if (selectedCategory === category) {
           <div class="flex mx-auto flex-wrap text-sm font-medium items-center justify-between">
-            <div class="bg-neutral-700 text-white tracking-widest mx-auto h-8 px-4 sm:px-8 rounded-lg flex items-center sm:space-x-12 border-2 border-green-600">
+            <div class="bg-neutral-700 text-white tracking-widest mx-auto h-8 px-4 sm:px-8 rounded-lg flex items-center sm:space-x-6 border-2 border-green-600">
               @for (course of category.course; track course.name) {
                 <div (click)="viewPdf(course.pdfName)"
                      class="cursor-pointer hover:underline transition-all duration-200 hover:scale-105"

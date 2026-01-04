@@ -20,6 +20,10 @@ export const routes: Routes = [
     component: PdfCertiComponent
   },
   {
+    path: 'cert',
+    component: PdfCertiComponent
+  },
+  {
     path: 'certification/:pdfname',
     component: PdfPedagogicComponent
   },
