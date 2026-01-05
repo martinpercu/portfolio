@@ -87,15 +87,6 @@ export class PdfCertiComponent {
       ],
     },
     {
-      name: 'Database',
-      mainPdfName: 'db-mongodb-modeling',
-      course: [
-        { name: 'Fundaments', pdfName: 'db-fundaments' },
-        { name: 'MongoDB', pdfName: 'db-mongodb' },
-        { name: 'MongoDB-Modeling', pdfName: 'db-mongodb-modeling' },
-      ],
-    },
-    {
       name: 'Others',
       mainPdfName: 'git-github',
       course: [
