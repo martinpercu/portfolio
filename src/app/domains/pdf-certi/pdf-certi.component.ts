@@ -147,8 +147,8 @@ export class PdfCertiComponent {
         this.pdfUrl = null; // Asegúrate de que la URL sea nula si hay un error.
       }
     } else {
-      this.viewPdf('dotnet-ef')
-      this.toggleCategoryFirstTime(this.categories[5])
+      this.viewPdf('ai-langgraph')
+      this.toggleCategoryFirstTime(this.categories[0])
       // this.error = 'No se especificó un nombre de PDF en la URL.';
       // this.isLoading = false;
       // console.warn('No se encontró el parámetro "pdfname" en la URL.');
