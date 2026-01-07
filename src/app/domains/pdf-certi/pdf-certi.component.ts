@@ -30,8 +30,8 @@ export class PdfCertiComponent {
       course: [
         { name: 'Agents Langgraph', pdfName: 'ai-langgraph' },
         { name: 'Agents (LLM+RAG)', pdfName: 'ai-agentes-ai' },
-        { name: 'Chatbot + OpenAI', pdfName: 'ai-azureopenia' },
-        { name: 'Azure + OpenAI', pdfName: 'ai-openai-api' },
+        { name: 'Chatbot + OpenAI', pdfName: 'ai-openai-api' },
+        { name: 'Azure + OpenAI', pdfName: 'ai-azureopenia' },
       ],
     },
     {
