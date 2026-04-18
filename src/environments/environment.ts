@@ -1,5 +1,5 @@
 export const environment = {
-    BASEURL: 'https://trainer-teacher.web.app',
+    BASEURL: 'https://mart-in.us',
 
     BACK_CHAT_URL: 'https://assistant-chat-backend-production.up.railway.app'
 };

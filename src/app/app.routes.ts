@@ -12,6 +12,7 @@ import { ProjectsIaComponent } from '@projects-ia/pages/projects-ia/projects-ia.
 import { AcutePdfComponent } from './domains/acute-pdf/acute-pdf.component';
 import { PdfCertiComponent } from '@certi/pdf-certi.component';
 import { PdfPedagogicComponent } from './domains/pdf-pedagogic/pdf-pedagogic.component';
+import { CalendarComponent } from './domains/calendar/calendar.component';
 
 
 export const routes: Routes = [
@@ -62,5 +63,9 @@ export const routes: Routes = [
   {
     path: 'acute',
     component: AcutePdfComponent
+  },
+  {
+    path: 'calendar',
+    component: CalendarComponent
   },
 ];

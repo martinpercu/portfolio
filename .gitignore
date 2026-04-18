@@ -44,3 +44,5 @@ Thumbs.db
 # Angular environments
 src/environments/*
 !src/environments/*.ts
+
+CLAUDE.md

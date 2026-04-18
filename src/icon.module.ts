@@ -17,7 +17,8 @@ import {
   IconUserSearch,
   IconBriefcase,
   IconBracketsContain,
-  IconSquareRoundedCheck
+  IconSquareRoundedCheck,
+  IconCalendarClock
  } from 'angular-tabler-icons/icons';
 
 // Select some icons (use an object, not an array)
@@ -53,7 +54,8 @@ const icons = {
   IconUserSearch,
   IconBriefcase,
   IconBracketsContain,
-  IconSquareRoundedCheck
+  IconSquareRoundedCheck,
+  IconCalendarClock
 };
 
 @NgModule({
