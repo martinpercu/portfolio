@@ -46,3 +46,6 @@ src/environments/*
 !src/environments/*.ts
 
 CLAUDE.md
+
+/.firebase
+.firebase/
